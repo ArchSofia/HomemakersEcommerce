@@ -14,22 +14,27 @@ import {
 const NavBar = () => {
 	return (
 		<>
-			<Container maxW="100rem" bg="gray.900" color="#262626" padding={"0.5rem"}>
+			<Container maxW="100rem" bg="white.900" color="#262626" padding={"0.5rem"}>
 				<Flex alignContent="center" gap="2">
 					<Box p="2" color="white">
-						<Heading size="md"> <Link to={"/"}>HomeMakers</Link></Heading>
+						<Heading size="md" color='black'> <Link to={"/"}>HomeMakers</Link></Heading>
 					</Box>
 					
 					<Spacer/>
+					<Box>
+					<Button> <Link to={"/"}> Ver todo</Link>
+   
+  </Button>
+					</Box>
 					<Box>
 					<Menu>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Categorias
   </MenuButton>
   <MenuList>
-    <NavLink to={`/category/${almohadones}`}><MenuItem>Almohadones</MenuItem></NavLink>
+    <NavLink to={"/category/:id"}><MenuItem>Almohadones</MenuItem></NavLink>
     <MenuItem><Link to={"/category/:id"}>Mantas</Link></MenuItem>
-    <MenuItem><Link to={"/category/:id"}>Tu Cama</Link></MenuItem>
+    <MenuItem><Link to={"/category/:id"}>Ropa de Cama</Link></MenuItem>
   </MenuList>
 </Menu>
 					</Box>

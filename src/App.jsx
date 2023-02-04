@@ -1,18 +1,18 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
-import NavBar from "./components/NavBar";
-import CartWidget from "./components/CartWidget";
-import ItemListContainer from "./components/ItemListContainer";
+import NavBar from "./components/common/NavBar";
+import ItemListContainer from "./components/common/ItemListContainer";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemDetailContainer from "./components/common/ItemDetailContainer";
+import Footer from "./components/common/Footer";
 
 function App() {
 	return (
-		<BrowserRouter>
 		<ChakraProvider>
+		<BrowserRouter>
+		
 			<NavBar />
 			<Routes>
 				<Route exact path="/" element={<ItemListContainer/>}/>
@@ -20,9 +20,10 @@ function App() {
 				<Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
 			</Routes>
 			<ItemListContainer greeting={"Bienvenidos a HomeMakers"} />
-			
-		</ChakraProvider>
 		</BrowserRouter>
+		<Footer/>
+		</ChakraProvider>
+		
 	);
 }
 
