@@ -1,7 +1,7 @@
 import React from "react";
 
-const ItemListContainer = () => {
-	const greeting = "Bienvenidos";
+const ItemListContainer = ({greeting}) => {
+	
 	return <div>{greeting}</div>;
 };
 
