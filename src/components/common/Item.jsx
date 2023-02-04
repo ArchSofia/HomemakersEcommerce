@@ -18,7 +18,7 @@ const Item = () => {
         spaces, earthy toned spaces and for people who love a chic design with a
         sprinkle of vintage design.
       </Text>
-      <Text color='blue.600' fontSize='2xl'>
+      <Text color='black.600' fontSize='2xl'>
         $450
       </Text>
     </Stack>
@@ -26,10 +26,10 @@ const Item = () => {
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
+      <Button variant='solid' colorScheme='gray'>
         Buy now
       </Button>
-      <Button variant='ghost' colorScheme='blue'>
+      <Button variant='ghost' colorScheme='gray'>
         Add to cart
       </Button>
     </ButtonGroup>

@@ -8,6 +8,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import ItemDetailContainer from "./components/common/ItemDetailContainer";
 import Footer from "./components/common/Footer";
 import Home from "./components/pages/Home";
+import Cart from "./components/pages/Cart";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route exact path="/catalogue" element={<ItemListContainer/>}/>
 				<Route exact path="/category/:id" element={<ItemListContainer/>}/>
 				<Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
+				<Route exact path="/cart" element={<Cart/>}/>
 			</Routes>
 		</BrowserRouter>
 		<Footer/>

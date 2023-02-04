@@ -25,7 +25,7 @@ const NavBar = () => {
 
 					<Box>
 						<Center>
-					<Tabs>
+					<Tabs colorScheme='gray'>
   <TabList>
     <Tab><Link to={"/catalogue"}> Ver todo</Link></Tab>
     <Tab><Link to={"/category/:id"}>Almohadones</Link></Tab>
@@ -34,13 +34,13 @@ const NavBar = () => {
 
   <TabPanels>
     <TabPanel>
-      <p>Puedes ver todos los productos aqui</p>
+   {/*    <p>Puedes ver todos los productos aqui</p> */}
     </TabPanel>
     <TabPanel>
-      <p>Almohadones</p>
+     {/*  <p>Almohadones</p> */}
     </TabPanel>
     <TabPanel>
-      <p>Mantas</p>
+     {/*  <p>Mantas</p> */}
     </TabPanel>
   </TabPanels>
 </Tabs>
@@ -49,7 +49,8 @@ const NavBar = () => {
 					
 					<Spacer />
 					<Box p="2" color="black">
-						<CartWidget />
+					<CartWidget />
+						
 					</Box>
 				</Flex>
 			</Container>
