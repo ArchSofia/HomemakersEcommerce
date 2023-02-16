@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Almohadon 1",
+        "price": 100,
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+        "stock": 1,
+        "category": "almohadon"
+      },
+      {
+        "id": 2,
+        "name": "Manta 2",
+        "price": 200,
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+        "stock": 2,
+        "category": "manta"
+      },
+      {
+        "id": 3,
+        "name": "Almohadon 3",
+        "price": 300,
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+        "stock": 3,
+        "category": "almohadon"
+      },
+      {
+        "id": 4,
+        "name": "Almohadon 4",
+        "price": 400,
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+        "stock": 4,
+        "category": "almohadon"
+      },
+      {
+        "id": 5,
+        "name": "Manta 5",
+        "price": 500,
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+        "stock": 5,
+        "category": "almohadon"
+      }
+]
