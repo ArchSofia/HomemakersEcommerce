@@ -1,47 +1,52 @@
 [
     {
         "id": 1,
-        "name": "Almohadon 1",
-        "price": 100,
-        "description":
+        "imagen": "https://unsplash.com/photos/rf3u4jac6go",
+        "nombre": "Almohadon 1",
+        "precio": 100,
+        "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 1,
-        "category": "almohadon"
+        "categoria": "almohadon"
       },
       {
         "id": 2,
-        "name": "Manta 2",
-        "price": 200,
-        "description":
+        "nombre": "Manta 2",
+        "imagen": "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/assets/1.jpeg",
+        "precio": 200,
+        "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 2,
-        "category": "manta"
+        "categoria": "manta"
       },
       {
         "id": 3,
-        "name": "Almohadon 3",
-        "price": 300,
-        "description":
+        "nombre": "Almohadon 3",
+        "imagen": "https://unsplash.com/photos/rf3u4jac6go",
+        "precio": 300,
+        "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 3,
-        "category": "almohadon"
+        "categoria": "almohadon"
       },
       {
         "id": 4,
-        "name": "Almohadon 4",
-        "price": 400,
-        "description":
+        "nombre": "Almohadon 4",
+        "imagen": "https://unsplash.com/photos/rf3u4jac6go",
+        "precio": 400,
+        "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 4,
-        "category": "almohadon"
+        "categoria": "almohadon"
       },
       {
         "id": 5,
-        "name": "Manta 5",
-        "price": 500,
-        "description":
+        "nombre": "Manta 5",
+        "imagen": "https://unsplash.com/photos/rf3u4jac6go",
+        "precio": 500,
+        "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 5,
-        "category": "almohadon"
+        "categoria": "almohadon"
       }
 ]
