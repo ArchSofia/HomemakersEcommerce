@@ -7,7 +7,7 @@
         "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 1,
-        "categoria": "almohadon"
+        "category": "almohadon"
       },
       {
         "id": 2,
@@ -17,7 +17,7 @@
         "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 2,
-        "categoria": "manta"
+        "category": "manta"
       },
       {
         "id": 3,
@@ -27,7 +27,7 @@
         "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 3,
-        "categoria": "almohadon"
+        "category": "almohadon"
       },
       {
         "id": 4,
@@ -37,7 +37,7 @@
         "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 4,
-        "categoria": "almohadon"
+        "category": "almohadon"
       },
       {
         "id": 5,
@@ -47,6 +47,6 @@
         "descripcion":
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
         "stock": 5,
-        "categoria": "almohadon"
+        "category": "manta"
       }
 ]

@@ -15,7 +15,7 @@ const ItemList = ({ productos }) => {
 						descripcion={producto.descripcion}
 						precio={producto.precio}
 						stock={producto.stock}
-						categoria={producto.categoria}
+						category={producto.category}
 					/>
 				))}
 			</Container>

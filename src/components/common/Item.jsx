@@ -15,15 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import imagenes from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/assets/1.jpeg";
 
-const Item = ({
-	id,
-	nombre,
-	stock,
-	categoria,
-	imagen,
-	precio,
-	descripcion,
-}) => {
+const Item = ({ id, nombre, stock, category, imagen, precio, descripcion }) => {
 	return (
 		<>
 			<div key={id}>
@@ -37,7 +29,7 @@ const Item = ({
 								${precio}
 							</Text>
 							<Text color="blue.800" fontSize="l">
-								Category: {categoria}
+								Category: {category}
 							</Text>
 						</Stack>
 					</CardBody>

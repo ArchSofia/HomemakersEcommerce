@@ -41,10 +41,10 @@ const NavBar = () => {
 										<Link to={"/catalogue"}> Ver todo</Link>
 									</Tab>
 									<Tab>
-										<Link to={"/category/:id"}>Almohadones</Link>
+										<Link to={`/category/${"almohadon"}`}>Almohadones</Link>
 									</Tab>
 									<Tab>
-										<Link to={"/category/:id"}>Mantas</Link>
+										<Link to={`/category/${"manta"}`}>Mantas</Link>
 									</Tab>
 								</TabList>
 

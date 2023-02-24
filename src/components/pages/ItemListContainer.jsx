@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Heading, Center } from "@chakra-ui/react";
 
 const ItemListContainer = () => {
-	const { categoria } = useParams();
+	const { category } = useParams();
 
 	const getDatos = () => {
 		return new Promise((resolve, reject) => {
@@ -28,7 +28,7 @@ const ItemListContainer = () => {
 
 	fetchingData();
 
-	if (categoria === undefined) {
+	if (category === undefined) {
 		return (
 			<div>
 				<Center h="100px" color="black">
@@ -39,23 +39,23 @@ const ItemListContainer = () => {
 				<ItemList productos={Data} />
 			</div>
 		);
+	} else {
+		const catFilter = Data.filter((producto) => producto.category === category);
+		return (
+			<div>
+				<Center h="100px" color="black">
+					<Heading as="h2" size="2xl">
+						Productos por categoría
+					</Heading>
+				</Center>
+				{catFilter ? (
+					<ItemList productos={catFilter} />
+				) : (
+					<ItemList productos={Data} />
+				)}
+			</div>
+		);
 	}
-
-	const catFilter = Data.filter((producto) => producto.categoria === categoria);
-	return (
-		<div>
-			<Center h="100px" color="black">
-				<Heading as="h2" size="2xl">
-					probando
-				</Heading>
-			</Center>
-			{catFilter ? (
-				<ItemList productos={catFilter} />
-			) : (
-				<ItemList productos={Data} />
-			)}
-		</div>
-	);
 };
 
 export default ItemListContainer;
