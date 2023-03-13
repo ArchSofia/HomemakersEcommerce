@@ -10,7 +10,7 @@ import {
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
 const ItemCount = ({ stock }) => {
-	const [count, setcount] = useState(0);
+	const [count, setCount] = useState(0);
 
 	const onAdd = () => {
 		setCount(count + 1);

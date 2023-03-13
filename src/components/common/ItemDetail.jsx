@@ -2,6 +2,8 @@ import {
 	Center,
 	Card,
 	CardBody,
+	ButtonGroup,
+	Link,
 	Image,
 	Stack,
 	Heading,
@@ -38,16 +40,19 @@ const ItemDetail = ({ productos }) => {
 								</Stack>
 							</CardBody>
 							<Divider />
-							<CardFooter>
-								<ButtonGroup spacing="2">
-									<Button variant="solid" colorScheme="gray">
+							<Center>
+								<CardFooter>
+									<ButtonGroup spacing="2">
+										{/* <Button variant="solid" colorScheme="gray">
 										<Link to={`/item/${id}`}>Detalle</Link>
-									</Button>
-									<Button variant="ghost" colorScheme="gray">
-										Agregar al carrito
-									</Button>
-								</ButtonGroup>
-							</CardFooter>
+									</Button> */}
+										<ItemCount stock={producto.stock} />
+										<Button variant="ghost" colorScheme="gray">
+											Agregar al carrito
+										</Button>
+									</ButtonGroup>
+								</CardFooter>
+							</Center>
 						</Card>
 					</Center>
 				</div>
