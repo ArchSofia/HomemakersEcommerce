@@ -17,9 +17,13 @@ import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { useEffect, useState } from "react";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { CartContext } from "../../contexts/ShoppingCartContext.jsx";
+import { useContext } from "react";
 
 const ItemDetail = ({ productos }) => {
 	const { id } = useParams();
+	const [count, setCount] = useState(0);
+	const { addToCart } = useContext(CartContext);
 
 	const [producto, setProducto] = useState([]);
 
@@ -70,7 +74,16 @@ const ItemDetail = ({ productos }) => {
 											precio={producto.precio}
 											nombre={producto.nombre}
 										/>
-										<Button variant="ghost" colorScheme="gray">
+										<Button
+											variant="ghost"
+											colorScheme="gray"
+											onClick={() =>
+												addToCart({
+													item: producto,
+													quantity: count,
+												})
+											}
+										>
 											Agregar al carrito
 										</Button>
 									</ButtonGroup>
