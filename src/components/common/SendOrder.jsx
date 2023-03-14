@@ -38,18 +38,18 @@ const SendOrder = () => {
 	return (
 		<div>
 			<Center>
-				<Heading>Sending orders</Heading>
+				<Heading>Ordenes de envío</Heading>
 			</Center>
 
 			<Container>
 				<FormControl>
 					<form onSubmit={handleSubmit}>
-						<FormLabel>NAME</FormLabel>
+						<FormLabel>Nombre</FormLabel>
 						<Input size="lg" onChange={(e) => setName(e.target.value)} />
-						<FormLabel>EMAIL</FormLabel>
+						<FormLabel>Email</FormLabel>
 						<Input size="lg" onChange={(e) => setEmail(e.target.value)} />
-						<Button colorScheme="blue" type="submit" m={5}>
-							Send Infomation
+						<Button colorScheme="gray" type="submit" m={5}>
+							Enviar información
 						</Button>
 					</form>
 				</FormControl>
