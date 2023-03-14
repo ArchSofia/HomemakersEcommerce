@@ -3,11 +3,40 @@ import ItemList from "../common/ItemList";
 import Data from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/data.json";
 import { useParams } from "react-router-dom";
 import { Heading, Center } from "@chakra-ui/react";
+import { getDocs, collection, getFirestore } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
+import { useEffect, useState } from "react";
 
 const ItemListContainer = () => {
+	const [productos, setProductos] = useState([]);
 	const { category } = useParams();
 
-	const getDatos = () => {
+	useEffect(() => {
+		const db = getFirestore();
+		const productosCollection = collection(db, "productos");
+		getDocs(productosCollection).then((querySnapshot) => {
+			const productos = querySnapshot.docs.map((doc) => ({
+				...doc.data(),
+				id: doc.id,
+			}));
+			setProductos(productos);
+		});
+	}, []);
+
+	const catFilter = productos.filter(
+		(producto) => producto.category === category
+	);
+
+	return (
+		<div>
+			{category ? (
+				<ItemList productos={catFilter} />
+			) : (
+				<ItemList productos={productos} />
+			)}
+		</div>
+	);
+	/* 	const getDatos = () => {
 		return new Promise((resolve, reject) => {
 			if (Data.length === 0) {
 				reject(new Error("No hay datos"));
@@ -55,7 +84,7 @@ const ItemListContainer = () => {
 				)}
 			</div>
 		);
-	}
+	} */
 };
 
 export default ItemListContainer;

@@ -21,10 +21,10 @@ const Item = ({ id, nombre, stock, category, imagen, precio, descripcion }) => {
 			<div key={id}>
 				<Card maxW="sm">
 					<CardBody>
-						<Image src={imagenes} alt="" borderRadius="lg" />
+						<Image src={imagen} alt="" borderRadius="lg" />
 						<Stack mt="6" spacing="3">
 							<Heading size="md">{nombre}</Heading>
-							<Text>{descripcion}</Text>
+							{/* <Text>{descripcion}</Text> */}
 							<Text color="black.600" fontSize="2xl">
 								${precio}
 							</Text>

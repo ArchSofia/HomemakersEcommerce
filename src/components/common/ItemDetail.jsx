@@ -27,7 +27,7 @@ const ItemDetail = ({ productos }) => {
 					<Center p="1rem">
 						<Card maxW="sm">
 							<CardBody>
-								<Image src={imagenes} alt="" borderRadius="lg" />
+								<Image src={producto.imagen} alt="" borderRadius="lg" />
 								<Stack mt="6" spacing="3">
 									<Heading size="md">{producto.nombre}</Heading>
 									<Text>{producto.descripcion}</Text>
