@@ -28,9 +28,9 @@ const Cart = () => {
 
 	return (
 		<>
-			<Center bg="#D6EAF8" h="100px" color="black">
+			<Center bg="white" h="100px" color="black">
 				<Heading as="h2" size="2xl">
-					Cart
+					Carrito
 				</Heading>
 			</Center>
 			{cart.map((item) => {
@@ -38,18 +38,18 @@ const Cart = () => {
 					<Container key={item.id} className="main-catalogue">
 						<Card maxW="sm">
 							<CardHeader>
-								<Heading size="md">{item.name}</Heading>
+								<Heading size="md">{item.nombre}</Heading>
 							</CardHeader>
 							<CardBody>
 								<Text as="b">Quantity: {item.quantity}</Text>
-								<Text>Price: U$D {item.price}</Text>
+								<Text>Price: U$D {item.precio}</Text>
 							</CardBody>
 							<CardFooter>
 								<Button
 									colorScheme="red"
 									onClick={() => console.log("Eliminando")}
 								>
-									Delete from cart
+									Eliminar del carrito
 								</Button>
 							</CardFooter>
 						</Card>

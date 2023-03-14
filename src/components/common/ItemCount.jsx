@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../contexts/ShoppingCartContext.jsx";
 import {
 	Text,
 	ButtonGroup,
@@ -9,8 +10,9 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, id, precio, nombre }) => {
 	const [count, setCount] = useState(0);
+	const [cart, setCart] = useContext(CartContext);
 
 	const onAdd = () => {
 		setCount(count + 1);
@@ -19,6 +21,24 @@ const ItemCount = ({ stock }) => {
 	const onSubstract = () => {
 		setCount(count - 1);
 	};
+
+	const addToCart = () => {
+		setCart((currItems) => {
+			const isItemFound = currItems.find((item) => item.id == id);
+			if (isItemFound) {
+				return currItems.map((item) => {
+					if (item.id == id) {
+						return { ...item, quantity: item.quantity + count };
+					} else {
+						return item;
+					}
+				});
+			} else {
+				return [...currItems, { id, quantity: count, precio, nombre }];
+			}
+		});
+	};
+
 	return (
 		<>
 			<ButtonGroup size="sm" isAttached variant="outline">

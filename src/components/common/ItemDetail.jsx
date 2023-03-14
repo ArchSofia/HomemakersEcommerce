@@ -15,9 +15,27 @@ import {
 import imagenes from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/assets/1.jpeg";
 import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { useEffect, useState } from "react";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 const ItemDetail = ({ productos }) => {
 	const { id } = useParams();
+
+	const [producto, setProducto] = useState([]);
+
+	useEffect(() => {
+		const db = getFirestore();
+
+		const productosRef = doc(db, "productos", `${id}`);
+
+		getDoc(productosRef).then((snapshot) => {
+			if (snapshot.exists()) {
+				setProducto(snapshot.data());
+			} else {
+				console.log("No such document!");
+			}
+		});
+	}, []);
 
 	const productoFilter = productos.filter((producto) => producto.id == id);
 	return (
@@ -46,7 +64,12 @@ const ItemDetail = ({ productos }) => {
 										{/* <Button variant="solid" colorScheme="gray">
 										<Link to={`/item/${id}`}>Detalle</Link>
 									</Button> */}
-										<ItemCount stock={producto.stock} />
+										<ItemCount
+											stock={producto.stock}
+											id={producto.id}
+											precio={producto.precio}
+											nombre={producto.nombre}
+										/>
 										<Button variant="ghost" colorScheme="gray">
 											Agregar al carrito
 										</Button>

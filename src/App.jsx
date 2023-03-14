@@ -11,8 +11,8 @@ import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
 function App() {
 	return (
-		<ShoppingCartProvider>
-			<ChakraProvider>
+		<ChakraProvider>
+			<ShoppingCartProvider>
 				<BrowserRouter>
 					<NavBar />
 					<Routes>
@@ -28,8 +28,8 @@ function App() {
 					</Routes>
 				</BrowserRouter>
 				<Footer />
-			</ChakraProvider>
-		</ShoppingCartProvider>
+			</ShoppingCartProvider>
+		</ChakraProvider>
 	);
 }
 

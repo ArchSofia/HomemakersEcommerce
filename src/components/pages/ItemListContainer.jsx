@@ -28,7 +28,7 @@ const ItemListContainer = () => {
 	);
 
 	return (
-		<div>
+		<div className="itemListContainer">
 			{category ? (
 				<ItemList productos={catFilter} />
 			) : (

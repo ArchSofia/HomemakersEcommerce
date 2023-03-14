@@ -13,7 +13,6 @@ import {
 	Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import imagenes from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/assets/1.jpeg";
 
 const Item = ({ id, nombre, stock, category, imagen, precio, descripcion }) => {
 	return (
