@@ -40,7 +40,7 @@ const SendOrder = ({ cart, total }) => {
 		buyer: { name, phone, email },
 		// estos datos de item los toma del cart
 		items: [{ cart }],
-		/* total: 100,  */
+		total: { total },
 	};
 
 	// TODO: armar el formulario como un componente aparte y solo renderizarlo si hay algo en el carrito y lo consumo desde cart
@@ -62,7 +62,7 @@ const SendOrder = ({ cart, total }) => {
 						<FormLabel>Phone</FormLabel>
 						<Input size="lg" onChange={(e) => setPhone(e.target.value)} />
 						<Button colorScheme="gray" type="submit" m={5}>
-							Enviar información
+							Realizar compra
 						</Button>
 					</form>
 				</FormControl>

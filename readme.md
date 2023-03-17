@@ -3,9 +3,9 @@
 - [x] Agregarle al carrito el total, imagen producto.
 - [x] Agregar phone al form
 
-// TODO armar la orden con los items y total.
+- [x] armar la orden con los items y total.
 
-// TODO que el form solo se renderice cuando click en realizar compra
+- [x] que el form solo se renderice cuando click en realizar compra
 
 // TODO mejorar esteticamente cart y form
 
