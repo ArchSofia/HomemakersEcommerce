@@ -14,14 +14,16 @@ import {
 	Container,
 	CardHeader,
 	CardFooter,
+	StackDivider,
 	Text,
 	Box,
-	Flex,
 	Textarea,
+	Spacer,
 } from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { CartContext } from "../../contexts/ShoppingCartContext.jsx";
 import SendOrder from "../common/SendOrder.jsx";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 	const [cart, setCart] = useContext(CartContext);
@@ -79,7 +81,15 @@ const Cart = () => {
 				{!buy ? (
 					<div>
 						{cart.length < 1 ? (
-							<Text>No hay productos en el carrito</Text>
+							<>
+								<div className="noHayProductos">
+									<Heading size="md">No hay productos en el carrito</Heading>
+
+									<Button variant="solid" colorScheme="gray">
+										<Link to={"/catalogue"}>Ver productos</Link>
+									</Button>
+								</div>
+							</>
 						) : (
 							<div>
 								{cart.map((item) => {
@@ -116,26 +126,47 @@ const Cart = () => {
 
 						<div className="cart-info">
 							{cart.length > 0 && (
-								<div>
-									<h2>Detalle del carrito:</h2>
-									<h3>Cantidad de productos: {quantity} </h3>
-									<h3>
-										{" "}
-										Precio total:{" "}
-										{total > 0 ? total : "No hay productos en el carrito"}{" "}
-									</h3>
-									<h1>El total del carrito es ${total}</h1>
+								<>
+									<Card>
+										<CardHeader>
+											<Heading size="md">Detalle del carrito</Heading>
+										</CardHeader>
 
-									<div className="btn-cart">
-										<Button
-											variant="solid"
-											colorScheme="gray"
-											onClick={() => setBuy(true)}
-										>
-											Realizar compra
-										</Button>
-									</div>
-								</div>
+										<CardBody>
+											<Stack divider={<StackDivider />} spacing="4">
+												<Box>
+													<Heading size="xs" textTransform="uppercase">
+														Cantidad de productos
+													</Heading>
+													<Text pt="2" fontSize="sm">
+														{quantity}
+													</Text>
+												</Box>
+												<Box>
+													<Heading size="xs" textTransform="uppercase">
+														Precio total
+													</Heading>
+													<Text pt="2" fontSize="sm">
+														{total > 0
+															? `$ ${total}`
+															: "No hay productos en el carrito"}
+													</Text>
+												</Box>
+												<Box>
+													<div className="btn-cart">
+														<Button
+															variant="solid"
+															colorScheme="gray"
+															onClick={() => setBuy(true)}
+														>
+															Realizar compra
+														</Button>
+													</div>
+												</Box>
+											</Stack>
+										</CardBody>
+									</Card>
+								</>
 							)}
 						</div>
 					</div>
@@ -178,32 +209,45 @@ const Cart = () => {
 								</div>
 							)}
 
-							<div className="cart-info">
-								{cart.length > 0 && (
-									<div>
-										<h2>Detalle del carrito:</h2>
-										<h3>Cantidad de productos: {quantity} </h3>
-										<h3>
-											{" "}
-											Precio total:{" "}
-											{total > 0
-												? total
-												: "No hay productos en el carrito"}{" "}
-										</h3>
-										<h1>El total del carrito es ${total}</h1>
+							<Card>
+								<CardHeader>
+									<Heading size="md">Detalle del carrito</Heading>
+								</CardHeader>
 
-										<div className="btn-cart">
-											<Button
-												variant="solid"
-												colorScheme="gray"
-												onClick={() => setBuy(true)}
-											>
-												Ir al checkout
-											</Button>
-										</div>
-									</div>
-								)}
-							</div>
+								<CardBody>
+									<Stack divider={<StackDivider />} spacing="4">
+										<Box>
+											<Heading size="xs" textTransform="uppercase">
+												Cantidad de productos
+											</Heading>
+											<Text pt="2" fontSize="sm">
+												{quantity}
+											</Text>
+										</Box>
+										<Box>
+											<Heading size="xs" textTransform="uppercase">
+												Precio total
+											</Heading>
+											<Text pt="2" fontSize="sm">
+												{total > 0
+													? `$ ${total}`
+													: "No hay productos en el carrito"}
+											</Text>
+										</Box>
+										<Box>
+											<div className="btn-cart">
+												<Button
+													variant="solid"
+													colorScheme="gray"
+													onClick={() => setBuy(true)}
+												>
+													Realizar compra
+												</Button>
+											</div>
+										</Box>
+									</Stack>
+								</CardBody>
+							</Card>
 						</div>
 						<SendOrder cart={cart} total={total} />
 					</>
