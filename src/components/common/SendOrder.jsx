@@ -11,29 +11,40 @@ import {
 } from "@chakra-ui/react";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { useState } from "react";
+import { CartContext } from "../../contexts/ShoppingCartContext.jsx";
 
-const SendOrder = () => {
+const SendOrder = ({ cart, total }) => {
 	const [orderId, setOrderId] = useState(null);
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
+	const [phone, setPhone] = useState("");
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (name === "" || email === "") {
+		if (name === "" || email === "" || phone === "") {
 			alert("No pueden existir campos vacios");
 		} else {
 			addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
 		}
 		setEmail(" ");
+		setName(" ");
+		setPhone(" ");
 	};
 
 	const db = getFirestore();
 	const ordersCollection = collection(db, "orden");
 
 	const order = {
-		name,
-		email,
+		// estos datos los recibo de un formulario
+		/* buyer: { name, phone, email }, */
+		buyer: { name, phone, email },
+		// estos datos de item los toma del cart
+		items: [{ cart }],
+		/* total: 100,  */
 	};
+
+	// TODO: armar el formulario como un componente aparte y solo renderizarlo si hay algo en el carrito y lo consumo desde cart
+	// renderizado condicional.  sino usestate si en el cart hay más de un item ahí habilito los campos de mi form, sino estan deshabilitados
 
 	return (
 		<div>
@@ -48,6 +59,8 @@ const SendOrder = () => {
 						<Input size="lg" onChange={(e) => setName(e.target.value)} />
 						<FormLabel>Email</FormLabel>
 						<Input size="lg" onChange={(e) => setEmail(e.target.value)} />
+						<FormLabel>Phone</FormLabel>
+						<Input size="lg" onChange={(e) => setPhone(e.target.value)} />
 						<Button colorScheme="gray" type="submit" m={5}>
 							Enviar información
 						</Button>

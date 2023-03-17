@@ -47,7 +47,7 @@ const ItemDetail = ({ productos }) => {
 			{productoFilter.map((producto) => (
 				<div key={producto.id}>
 					<Center p="1rem">
-						<Card maxW="sm">
+						<Card maxW="sm" className="detailCard">
 							<CardBody>
 								<Image src={producto.imagen} alt="" borderRadius="lg" />
 								<Stack mt="6" spacing="3">
@@ -73,8 +73,9 @@ const ItemDetail = ({ productos }) => {
 											id={producto.id}
 											precio={producto.precio}
 											nombre={producto.nombre}
+											imagen={producto.imagen}
 										/>
-										<Button
+										{/* 										<Button
 											variant="ghost"
 											colorScheme="gray"
 											onClick={() =>
@@ -85,7 +86,7 @@ const ItemDetail = ({ productos }) => {
 											}
 										>
 											Agregar al carrito
-										</Button>
+										</Button> */}
 									</ButtonGroup>
 								</CardFooter>
 							</Center>

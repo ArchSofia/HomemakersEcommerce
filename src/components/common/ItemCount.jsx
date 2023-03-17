@@ -5,13 +5,14 @@ import {
 	Text,
 	ButtonGroup,
 	IconButton,
+	Button,
 	Tooltip,
 	Center,
 } from "@chakra-ui/react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
-const ItemCount = ({ stock, id, precio, nombre }) => {
-	const [count, setCount] = useState(0);
+const ItemCount = ({ stock, id, precio, nombre, imagen }) => {
+	const [count, setCount] = useState(1);
 	const [cart, setCart] = useContext(CartContext);
 
 	const onAdd = () => {
@@ -34,7 +35,7 @@ const ItemCount = ({ stock, id, precio, nombre }) => {
 					}
 				});
 			} else {
-				return [...currItems, { id, quantity: count, precio, nombre }];
+				return [...currItems, { id, quantity: count, precio, nombre, imagen }];
 			}
 		});
 	};
@@ -51,6 +52,7 @@ const ItemCount = ({ stock, id, precio, nombre }) => {
 				)}
 				<Center w="50px" h="30px">
 					<Text as="b">{count}</Text>
+					{/* Add to cart: {count} */}
 				</Center>
 				{count < stock ? (
 					<IconButton icon={<AddIcon />} onClick={onAdd} />
@@ -59,6 +61,9 @@ const ItemCount = ({ stock, id, precio, nombre }) => {
 						<IconButton icon={<AddIcon />} isDisabled />
 					</Tooltip>
 				)}
+				<Button onClick={() => addToCart()} variant="ghost" colorScheme="gray">
+					Agregar al carrito
+				</Button>
 			</ButtonGroup>
 		</>
 	);

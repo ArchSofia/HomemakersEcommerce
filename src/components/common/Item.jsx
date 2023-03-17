@@ -18,7 +18,7 @@ const Item = ({ id, nombre, stock, category, imagen, precio, descripcion }) => {
 	return (
 		<>
 			<div key={id}>
-				<Card maxW="sm">
+				<Card maxW="sm" className="cards">
 					<CardBody>
 						<Image src={imagen} alt="" borderRadius="lg" />
 						<Stack mt="6" spacing="3">
@@ -38,9 +38,9 @@ const Item = ({ id, nombre, stock, category, imagen, precio, descripcion }) => {
 							<Button variant="solid" colorScheme="gray">
 								<Link to={`/item/${id}`}>Detalle</Link>
 							</Button>
-							<Button variant="ghost" colorScheme="gray">
+							{/* <Button variant="ghost" colorScheme="gray">
 								Agregar al carrito
-							</Button>
+							</Button> */}
 						</ButtonGroup>
 					</CardFooter>
 				</Card>
