@@ -1,18 +1,54 @@
-- [x] Que vuelva a funcionar El carrito.
-- [x] Botón eliminar producto carrito
-- [x] Agregarle al carrito el total, imagen producto.
-- [x] Agregar phone al form
+# HomeMakers tienda de decoración de interiores
 
-- [x] armar la orden con los items y total.
+En esta tienda online podrás encontrar una selección curada por los mejores profesionales de productos de alta calidad para tu hogar.
 
-- [x] que el form solo se renderice cuando click en realizar compra
+# Commands
 
-// TODO mejorar esteticamente cart y form
+Para instalar: npm install, Para correr: npm run dev.
 
-// TODO gif mostrando navegabilidad + base de datos de firebase
+# Producto Mínimo Viable
 
-// TODO swirl espera, sweetalert
+Desarrollar una aplicación para un marketplace digital.
 
-// TODO CREAR Este DOC
+# Stack
 
-// TODO deploy en vercel
+- React (Vite)
+- Chakra UI
+- React router dom
+- DB: Firebase
+- Deploy: Vercel
+
+# Components
+
+- Cart
+- Cart Widget
+- Item Detail Container
+- Item Detail
+- Item
+- ItemCount
+- Item List Container
+- Item List
+- Navbar
+
+# Context
+
+- Cart Context
+
+# Deploy
+
+- [Link](https://pre-entrega1-louv-archsofia.vercel.app/)
+
+# Gif de navegación: ingresando productos al carrito
+
+[Ver GIF de navegación](https://drive.google.com/file/d/1wRZCaIN6JyAai-2rQEtqCo17sN4xd2e6/view)
+
+## Instalación
+
+```
+ git clone https://github.com/ArchSofia/ReactEntregaFinalCH.git
+ cd mirepo
+ npm install
+ npm start
+```
+
+##### Made with :purple_heart: by Sofia Diaz Valdez
