@@ -32,6 +32,42 @@
       
 }
 
+.cardsCart{
+    display: flex;
+/*  background-color: aquamarine; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+
+/* .cartContainer{
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: row;
+} */
+
+.caja{
+    display: flex;
+    /* background-color: thistle; */
+    width: 100%;
+}
+
+.cardsCart{
+    margin: 1rem;
+    width: 15rem;
+    /* background-color: darkcyan; */
+    }
+
 .itemListContainer{
     padding: 1rem;
     display: flex;
@@ -52,28 +88,9 @@ width: 15rem;
 
 
 
-/* .btn-send{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin: 1rem;
-} */
-
-/* .cart-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 10rem;
-} */
+.cart-info{
+    background-color: violet;
+    /* width: 23rem; */
+}
 
 
-/* form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-} */

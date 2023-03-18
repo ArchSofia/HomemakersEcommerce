@@ -71,13 +71,13 @@ const Cart = () => {
 		<>
 			<div>
 				<Center bg="white" h="100px" color="black">
-					<Heading as="h2" size="2xl">
+					<Heading as="h2" size="xl">
 						Carrito
 					</Heading>
 				</Center>
 			</div>
 
-			<div>
+			<div className="cartContainer">
 				{!buy ? (
 					<div>
 						{cart.length < 1 ? (
@@ -91,11 +91,14 @@ const Cart = () => {
 								</div>
 							</>
 						) : (
-							<div>
+							<div className="caja">
 								{cart.map((item) => {
 									return (
-										<Container key={item.id} className="main-catalogue">
-											<Card maxW="sm">
+										<Container
+											key={item.id}
+											className="main-catalogue cardsCart"
+										>
+											<Card maxW="sm" className="cardsCart">
 												<CardHeader>
 													<Heading size="md">{item.nombre}</Heading>
 												</CardHeader>
@@ -176,11 +179,14 @@ const Cart = () => {
 							{cart.length < 1 ? (
 								<Text>No hay productos en el carrito</Text>
 							) : (
-								<div>
+								<div className="caja">
 									{cart.map((item) => {
 										return (
-											<Container key={item.id} className="main-catalogue">
-												<Card maxW="sm">
+											<Container
+												key={item.id}
+												className="main-catalogue cardsCart"
+											>
+												<Card maxW="sm" className="cardsCart">
 													<CardHeader>
 														<Heading size="md">{item.nombre}</Heading>
 													</CardHeader>
