@@ -1,6 +1,5 @@
 import React from "react";
 import ItemDetail from "./ItemDetail";
-import Data from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/data.json";
 import { getDocs, collection, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
 

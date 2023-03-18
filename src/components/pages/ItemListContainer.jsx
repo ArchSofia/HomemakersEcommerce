@@ -1,6 +1,5 @@
 import React from "react";
 import ItemList from "../common/ItemList";
-import Data from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/data.json";
 import { useParams } from "react-router-dom";
 import { Heading, Center } from "@chakra-ui/react";
 import { getDocs, collection, getFirestore } from "firebase/firestore";

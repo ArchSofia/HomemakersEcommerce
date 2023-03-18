@@ -12,7 +12,6 @@ import {
 	CardFooter,
 	Divider,
 } from "@chakra-ui/react";
-import imagenes from "/Users/sofiadiazvaldez/Desktop/REACT_CH_2023/proyecto/preEntrega1/src/assets/1.jpeg";
 import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { useEffect, useState } from "react";
